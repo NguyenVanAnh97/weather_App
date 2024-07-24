@@ -54,13 +54,19 @@ const handleSearch = () => {
   }, 500)
 }
 
+const emit = defineEmits(['place-data']) //phải emit data lên component cha để hiển thị data trên đó
+// component con này đơn giản chỉ để lấy dữ liệu
+
 const getWeather = async (id) => {
   const response = await fetch(
     `http://api.weatherapi.com/v1/forecast.json?key=834afe3d28d04f2d9ea165725242207&q=id:${id}&days=3&aqi=no&alerts=no`
   )
 
   const data = await response.json()
-  console.log(data)
+  emit('place-data', data) // emit data lên component cha
+
+  searchTerm.query = ''
+  searchTerm.results = null
 }
 </script>
 
