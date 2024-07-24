@@ -33,8 +33,6 @@ const places = ref([])
 const addPlace = (data) => {
   places.value.push(data) // push data lên component cha
 }
-
-console.log(places)
 </script>
 
 <style scoped></style>
