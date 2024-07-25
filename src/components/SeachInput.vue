@@ -47,7 +47,6 @@ const handleSearch = () => {
 
       const data = await response.json()
       searchTerm.results = data
-      console.log(searchTerm.results)
     } else {
       searchTerm.results = null
     }

@@ -1,5 +1,4 @@
 <template>
-  {{ console.log(props.forcast) }}
   <div class="mb-2 flex items-center justify-center">
     <table class="w-full">
       <tr>
