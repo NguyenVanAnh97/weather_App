@@ -6,7 +6,7 @@
         <input
           type="text"
           placeholder="Search for a place"
-          class="rounded-r-lg p-2 border-0 outline-0 focus:ring-2 focus:ring-indigo-600 ring-inset p-2 w-full"
+          class="rounded-r-lg border-0 outline-0 focus:ring-2 focus:ring-indigo-600 ring-inset p-2 w-full"
           v-model="searchTerm.query"
           @input="handleSearch"
         />

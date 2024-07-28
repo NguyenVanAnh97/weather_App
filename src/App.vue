@@ -31,16 +31,16 @@ import WeatherCar from './components/WeatherCar.vue'
 const places = ref([])
 
 const addPlace = (data) => {
-  places.value.push(data) // push data lên component cha
+  places.value.push(data) // push data lên được emit từ searchInput lên places
 }
 
 const deletePlace = (name) => {
   places.value = places.value.filter((place) => place.location.name !== name) //  tạo ra một mảng mới với tất cả các phần tử của mảng hiện tại thỏa mãn điều kiện được chỉ định.
-} // truyền emit từ component weatherInfo => weatherCar => App (App render weatherCar dựa vào data places mà SearchInput emit lên)
+} // truyền emit từ component weatherInfo => weatherCar => App (App render weatherCar dựa vào data places mà SearchInput emit lên) => dùng pinia để giải quyết vấn đề trên
 
 /* 1. Hàm filter duyệt qua từng đối tượng place trong mảng places.value.
    2. Nó kiểm tra xem place.location.name có khác với name hay không.
-   3. Nếu place.location.name khác với name, đối tượng đó sẽ được giữ lại trong mảng mới.
+   3. Nếu place.location.name khác với name, đối tượng đó sẽ được thêm vào trong mảng mới.
    4. Nếu place.location.name trùng với name, đối tượng đó sẽ bị loại bỏ khỏi mảng mới. */
 </script>
 
